@@ -2,32 +2,481 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'SBAggroL';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'SBAggroM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --foreground-rgb: 0,0,0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  padding: 40px 100px;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 50, 150));
+  background-size: 200% 100%;
+  animation: sparkle 10s infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes sparkle {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+}
+header {
+  left: 50%;
+  text-align: center;
+}
+
+header a {
+  font-weight: bold;
+  color: #f8f8f8;
+  margin: 0 15px;
+}
+.sns_menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  color: #f8f8f8;
+  font-size: 30px;
+}
+header a:hover {
+  color: skyblue;
+}
+
+.main_text {
+  /* margin-left: 300px; */
+}
+
+.main_text h1 {
+  font-family: 'SBAggroM';
+  font-size: 40px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main_text .inline {
+  display: inline;
+}
+
+/* 손 */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-hand {
+  display: inline-block;
+  animation: wave 2s infinite;
+}
+
+.main__scroll-box {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.main__action:hover .main__scroll-box {
+  animation: scroll-down 3s infinite;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+
+
+/* 저는~~ */
+.aboutme h3 { 
+  margin-top:300px;
+  font-family: 'SBAggroM';
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: start;
+}
+
+/* 스킬 */
+.skills {
+  height: 40vh;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* 해시태그 영역 */
+
+.hashtag-container {
+  width: 750px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hashtag-wrapper {
+  width: 100%;
+  height: 33.33%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hashtag-row {
+  display: flex;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.hashtag {
+  display: inline-block;
+  /* background-color: ; */
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-family: 'SBAggroM';
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.row1 {
+  animation-delay:0s;
+  animation: scroll-right 18s linear infinite;
+}
+
+.row2 {
+  animation-delay:0s;
+  animation: scroll-right 30s linear infinite;
+}
+
+.row3 {
+  animation-delay:0s;
+  animation: scroll-right 28s linear infinite;
+}
+
+.hashtag-wrapper:hover .hashtag-row {
+  animation-play-state: paused;
+}
+
+/* 블러 효과 */
+.hashtag-container::before,
+.hashtag-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hashtag-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.hashtag-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+}
+.title_text {
+  margin-top: 350px;
+  text-align: start;
+  font-family:SBAggroM;
+  font-size: 45px;
+}
+.title_text:hover{
+  color: skyblue;
+}
+.kind_text{
+  margin-bottom:10px;
+  font-family:GangwonEduPowerExtraBoldA;
+  font-size: 35px;
+}
+.explain { 
+  font-family:SBAggroL;
+  font-size: 20px;
+}
+.sub_explain{
+  font-family:SBAggroL;
+  font-size: 20px;
+}
+.edu_text{
+  font-family:SBAggroM;
+  font-size:43px;
+}
+.edu_explain{
+  margin-top:10px;
+  font-weight:bold;
+  font-family:SBAggroL;
+  font-size:30px;
+}
+.edu_cal{
+  margin-top:10px;
+  font-family:SBAggroL;
+  font-size:25px;
+}
+.github-icon {
+  margin-left: 10px;
+  color: #f8f8f8;
+  font-size: 50px;
+  vertical-align: middle;
+}
+.github-icon:hover {
+  color: skyblue;
+}
+.edu_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.edu_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edu_content > div {
+  flex: 1;
+}
+
+.edu_content .edu-right {
+  margin-left: 20px;
+  flex: 2;
+}
+
+.long-text {
+  font-family:Pretendard-Regular;
+  font-size: 25px;
+  line-height: 1.5;
+}
+.core_text{
+  margin-top:10px;
+  font-family:SBAggroM;
+  font-size:30px;
+}
+.core_text:hover {
+  color: skyblue;
+}
+.ex_text{
+  margin-top:10px;
+  font-family:SBAggroL;
+  font-size:25px;
+}
+.link-icon {
+  margin-left: 20px;
+  color: #f8f8f8;
+  /* font-size: 30px; */
+  vertical-align: middle;
+}
+
+.link-icon:hover {
+  color: gray;
+}
+
+.ex_title{
+  font-family:SBAggroM;
+  font-size:43px;
+  display: flex;
+  align-items: center;
+}
+.ex_cal{
+  margin-top:10px;
+  font-family:SBAggroM;
+  font-size:25px;
+}
+.insta-icon{
+  margin-left: 20px;
+  color: #f8f8f8;
+  font-size: 30px;
+  vertical-align: middle;
+}
+.insta-icon:hover{
+  color:pink;
+}
+.navercafe-icon{
+  margin-left: 20px;
+  color: #f8f8f8;
+  font-size: 30px;
+  vertical-align: middle;
+}
+.navercafe-icon:hover{
+  color: lightgreen;
+}
+
+@media (max-width: 575px) {
+  body{
+    padding:40px 25px;
+  }
+  header {
+    left: 50%;
+    text-align: center;
+  }
+
+  header a {
+    font-weight: bold;
+    color: #f8f8f8;
+    margin: 0 15px;
+  }
+  .sns_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    color: #f8f8f8;
+    font-size: 25px;
+  }
+  header a:hover {
+    color: skyblue;
+  }
+
+  .main_text h1 {
+    font-family: 'SBAggroM';
+    font-size: 28px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main_text .inline {
+    display: inline;
+  }
+  .aboutme h3 { 
+
+    font-size: 25px;
+
+  }
+
+  .title_text {
+    font-size: 35px;
+  }
+  .kind_text{
+
+    font-size: 25px;
+  }
+  .explain{
+    font-size:17px;
+  }
+  .sub_explain{
+    font-size:15px;
+  }
+  .edu_text{
+    font-size: 28px;
+  }
+  .edu_explain{
+    font-size:20px;
+  }
+  .edu_content {
+    flex-direction: column;
+  }
+
+  .edu_content .edu-right {
+    margin-left: 0;
+    margin-top: 20px; /* Add some space between the elements */
+  }
+
+  .long-text {
+    font-size: 17px;
+  }
+  .github-icon {
+  font-size: 30px;
+  }
+  .edu_cal{
+    font-size: 20px;
+  }
+  .title_text{
+    font-size: 23px;
+  }
+  .ex_title{
+    font-size: 30px;
+  }
+  .ex_cal{
+    font-size:20px;
+  }
+  .core_text{
+    font-size:21px;
+  }
+  .ex_text{
+    font-size:18px;
+  }
+  .insta-icon{
+    font-size: 25px;
+  }
+  .navercafe-icon{
+    font-size: 25px;
+  }
+  .link-icon{
+    font-size: 25px;
   }
 }
