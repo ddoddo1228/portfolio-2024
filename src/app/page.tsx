@@ -258,7 +258,7 @@ export default function Home() {
           <div className="edu_text">레코딩</div>
           <div className="ex_cal">Member (2023.09.01 ~)</div>
           <div className="ex_text">
-          ⦁ 레코딩(Let's coding)은 SW중심사업단에서 지원하는 학교 내 동아리입니다.<br />
+          ⦁ 레코딩(Let&apos;s coding)은 SW중심사업단에서 지원하는 학교 내 동아리입니다.<br />
           ⦁ SW중심 대학 홈페이지 리뉴얼 및 Daily NewsReport 사이트를 제작 및 관리하는 활동을 진행했습니다.
           </div>
           <br /><br />
