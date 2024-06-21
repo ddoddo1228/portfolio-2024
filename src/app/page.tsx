@@ -5,6 +5,8 @@ import { SiNotion } from 'react-icons/si';
 
 export default function Home() {
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const handleScroll = (event: Event) => {
       event.preventDefault();
       window.scrollTo({
@@ -18,7 +20,7 @@ export default function Home() {
       const skillsSection = document.querySelector('#skills') as HTMLElement;
       if (skillsSection) {
         window.scrollTo({
-          top: skillsSection.offsetTop + 700, 
+          top: skillsSection.offsetTop + 700,
           behavior: 'smooth',
         });
       }
