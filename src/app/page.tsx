@@ -64,8 +64,13 @@ export default function Home() {
               Hello, World <span className="wave-hand">👋</span>
             </span>
             <br />
-            <span>저는 개발자를 꿈꾸는 오송은이라고 합니다.</span>
-          </h1>
+            <span>저는 끊임없이 성장하는<br />
+            학생 오송은이라고 합니다.</span><br /></h1> 
+            <div className = "small-text">
+           <p>🎂 Birth | 2002.12.28 </p>
+          <p>✉️ E-Mail | e5423894@naver.com</p>
+          <p>📞 010-3792-4027</p></div>
+          
         </div>
         <div className="main__action">
           <a className="main__scroll" href="#">
@@ -81,9 +86,8 @@ export default function Home() {
           </a>
         </div>
         <div className="aboutme">
-          <h3>
-            저는 다양한 분야에 관심이 많고, <br />
-            도전하는 것을 좋아합니다.
+        <h3>
+            다양한 기술과 도구를 활용하여 문제를 해결하는 것을 즐기며, <br /> 끊임없이 학습하고 성장하고자 합니다.
           </h3>
         </div>
         <section className="skills" id="skills">
@@ -132,6 +136,7 @@ export default function Home() {
                 <span className="hashtag">#VisualStudioCode</span>
                 <span className="hashtag">#VisualStudio</span>
                 <span className="hashtag">#MySQLWorkbench</span>
+                <span className="hashtag">#Docker</span>
                 <span className="hashtag">#Notion</span>
                 <span className="hashtag">#Slack</span>
                 <span className="hashtag">#CentOS</span>
@@ -173,7 +178,11 @@ export default function Home() {
             ➤ React나 TypeScript 등 새로운 기술을 배우기 위해 노력하고 있습니다.
           </div>
           <div className="kind_text"><br />기타</div>
-          <div className="explain">➤ Roboflow와 YOLOv5를 활용한 객체 탐지 모델 구현 경험이 있습니다.</div>
+          <div className="explain">➤ Roboflow와 YOLOv5를 활용한 객체 탐지 모델 구현 경험이 있습니다.<br /><br />
+          ➤ NOTION을 활용하여 프로젝트 관리를 한 경험이 다수 있습니다.<br /><br />
+          ➤ FIGMA / FigJam를 통해 프로젝트 설계 / 와이어 프레임, 화면 설계를 해오고 있습니다.<br /><br />
+          </div>
+          
           <div className="kind_text"><br />그 외</div>
           <div className="explain">
             ➤ 항상 겸손함을 유지하기 위해 노력합니다.<br /><br />
@@ -213,7 +222,9 @@ export default function Home() {
           <div className="title_text">🎓 Education 🎓</div>
           <div className="edu_text"><br />삼육대학교<br /></div>
           <div className="edu_explain">컴퓨터공학부 소프트웨어전공</div>
-          <div className="edu_cal">2021.03 ~ 2025.02 졸업 예정</div><br /><br /><br />
+          <div className="edu_cal">2021.03 ~ 2025.02 졸업 예정</div>
+          <div className="edu_cal">졸업 요건 충족 - 이수학점/졸업학점 (132/130)</div>
+          <br /><br /><br />
           <div className="edu_section">
               <div className="edu_text flex">
                 <span>벤처 스타트업 아카데미</span>
@@ -231,7 +242,7 @@ export default function Home() {
                     백엔드 개발자 양성 과정을 한 학기동안 수강하였고 
                   JAVA, JDBC, MySQL, MyBatis, JPA, HTML,  <br />
                   CSS, JavaScript, React, Servlet-JSP, Spring-Core, Spring-Boot, Spring-JPA,<br /> 
-                  Spring-MyBatis, Spring-Security, Rest API 등 실무 중심의 교육과정을 수강했습니다.
+                  Spring-MyBatis, Spring-Security, Rest API, 프로젝트 관리 등 실무 중심의 교육과정을 수강했습니다.
                   </span>
                 </div>
               </div>
@@ -265,6 +276,20 @@ export default function Home() {
           </div>
           <br /><br />
 
+          <div className="ex_title">
+            SU-PLUS 학생 검수단
+            <a href="https://su-plus.syu.ac.kr/" target="_blank" className="link-icon">
+              <FaExternalLinkAlt />
+            </a>
+          </div>
+          <div className="ex_cal">UX/UI 검수 (2023.12)</div>
+          
+          <div className="ex_text">
+          ⦁ SU-PLUS 홈페이지 리뉴얼을 하며 UX/UI 검수를 하게 되었습니다. <br />
+          ⦁ UX/UI 오류 32건, 예외 처리 오류 1건을 발견했습니다.          
+          </div>
+          <br /><br />
+
           <div className="edu_text">멋쟁이 사자처럼</div>
           <div className="ex_cal">아기사자 (2024.03 ~)</div>
           
@@ -273,6 +298,8 @@ export default function Home() {
           ⦁ 2024년 부터 백엔드 트랙에서 활동하며 공부하고 있습니다.          
           </div>
           <br /><br />
+
+      
 
           <div className="ex_title">
             은평대전
