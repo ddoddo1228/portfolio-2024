@@ -52,7 +52,7 @@ export default function Home() {
         <nav>
           <div className="sns_menu">
             <a href="https://github.com/ddoddo1228"><FaGithub /></a>
-            <a href="https://quickest-wineberry-bcd.notion.site/e6b4177d9f8747b38bee7ac89bcbce5f?pvs=4"><SiNotion /></a> 
+            {/* <a href="https://quickest-wineberry-bcd.notion.site/e6b4177d9f8747b38bee7ac89bcbce5f?pvs=4"><SiNotion /></a>  */}
             <a href="https://www.instagram.com/songeun_1228/"><FaInstagram /></a> 
           </div>            
         </nav>
